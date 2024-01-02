@@ -17,4 +17,5 @@ Node.js (for Vue.js)
    pip install -r requirement.txt
 
 2. Start the backend server located in the backend folder, serving on port 3000:
+   ```bash
    python backend/main.py
