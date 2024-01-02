@@ -1,4 +1,4 @@
-# Project: Show-Mania-v2.0
+# Project: Ticketswift
 Welcome to Your Project Name! This project involves multiple components, including a Flask web application and Vue.js frontend. To start the project, follow these steps:
 
 # Prerequisites
