@@ -1,3 +1,25 @@
+# Hi there, I'm Harsh Vardhan! 👋
+
+Welcome to my GitHub profile! I'm passionate about technology and love to create exciting projects that blend hardware and software. Here's a little bit about me:
+
+- 🔭 I enjoy building a wide range of projects, from Arduino circuits to web applications.
+- 🌱 I'm currently diving deep into the fascinating world of computer vision and artificial intelligence, with a focus on integrating them into IoT projects.
+- 👯 I'm always open to collaboration, whether it's for hackathons, innovative projects, or simply to make new friends in the tech community.
+- 🌍 Besides coding, I have a strong wanderlust and love to explore new places and cultures.
+
+## 💼 Skills and Interests
+
+##Project: Show-Mania-v2.0
+Welcome to Your Project Name! This project involves multiple components, including a Flask web application and Vue.js frontend. To start the project, follow these steps:
+
+#Prerequisites
+Before you begin, ensure you have the following prerequisites installed:
+
+Python 3.x
+Redis (for Celery)
+Node.js (for Vue.js)
+
+#Getting Started
 Step 1. First install all the required packages from requirement.txt file by the command "pip install -r requirement.txt"
 Step 2. Now start the backend server "python main.py", this is in backend folder serving on port 3000
 Step 3. Now start the Frontend server "python main.py", this is in frontend folder
