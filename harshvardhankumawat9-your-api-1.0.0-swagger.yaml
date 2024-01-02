@@ -1,0 +1,510 @@
+info:
+  _postman_id: e2ee5faa-0b70-455d-acb5-edd95e07fff6
+  name: Mad2 ticketshow
+  schema: https://schema.getpostman.com/json/collection/v2.1.0/collection.json
+  _exporter_id: '28806322'
+item:
+  - name: login
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "\r\n{\r\n    \"email\":\"harsh@gmail.com\",\r\n    \"password\":\"harsh\"\r\n}"
+      url:
+        raw: http://localhost:3000/loginapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - loginapi
+      description: >-
+        Its is Login api in which the token is generate a time of admin and user
+        login and validate user
+    response: []
+  - name: signup
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "\r\n{   \"name\":\"aarush\",\r\n    \"email\":\"aarush@gmail.com\",\r\n    \"password\":\"aarush\"\r\n}"
+      url:
+        raw: http://localhost:3000/signupapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - signupapi
+      description: Its is Signup api in which user is create and redirect to login page
+    response: []
+  - name: logout
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      url:
+        raw: http://localhost:3000/logoutapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - logoutapi
+      description: Here the token got delete and user logged out
+    response: []
+  - name: adminpage
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: GET
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      url:
+        raw: http://localhost:3000/adminpageapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - adminpageapi
+      description: >-
+        Its is Admin api in which all the venus and show created by admin is
+        retrived
+    response: []
+  - name: userpage
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: GET
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      url:
+        raw: http://localhost:3000/userpageapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - userpageapi
+      description: >-
+        Its is User api in which all the venus and show created by admin is
+        retrived and showed to the user
+    response: []
+  - name: create_venue
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"name\":\"cinestarts\",\r\n    \"place\":\"vaishalli nagar\",\r\n    \"capacity\":\"800\"\r\n}"
+      url:
+        raw: http://localhost:3000/categoryapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - categoryapi
+      description: In this a new venue will be created
+    response: []
+  - name: edit_venue
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: PUT
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"name\":\"cinestarts\",\r\n    \"place\":\"vaishalli nagar\",\r\n    \"capacity\":\"800\"\r\n}"
+      url:
+        raw: http://localhost:3000/categoryapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - categoryapi
+      description: In this a venue will be edited and saved
+    response: []
+  - name: delete_venue
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: DELETE
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"id\":1\r\n}"
+      url:
+        raw: http://localhost:3000/categoryapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - categoryapi
+      description: In this a venue will be deleted and saved
+    response: []
+  - name: create_show
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"name\":\"venom\",\r\n    \"price\":\"250\",\r\n    \"etimings\":\"02:01\",\r\n    \"stimings\":\"03:02\",\r\n    \"tags\":\"adventure\",\r\n    \"rating\":8,\r\n    \"id\":1\r\n}"
+      url:
+        raw: http://localhost:3000/productapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - productapi
+      description: In this a new show will be created and added in venue
+    response: []
+  - name: edit_show
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: PUT
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"name\":\"venom2\",\r\n    \"price\":\"250\",\r\n    \"etimings\":\"02:01\",\r\n    \"stimings\":\"03:02\",\r\n    \"tags\":\"adventure\",\r\n    \"rating\":9,\r\n    \"id\":1\r\n}"
+      url:
+        raw: http://localhost:3000/productapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - productapi
+      description: In this a show will be edited and saved
+    response: []
+  - name: delete_show
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: DELETE
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"id\":1\r\n}"
+      url:
+        raw: http://localhost:3000/productapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - productapi
+      description: In this a show will be deleted and saved
+    response: []
+  - name: details_for_booking
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: PUT
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"cid\":1,\r\n    \"pid\":2\r\n}"
+      url:
+        raw: http://localhost:3000/bookproductapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - bookproductapi
+      description: >-
+        When user click on a particular show then this api will show all the
+        neccesary details of the show as well as venue
+    response: []
+  - name: addto_cart
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"cid\":1,\r\n    \"pid\":2,\r\n    \"quantity\":\"5\",\r\n    \"current_email\":\"user1@gmail.com\"\r\n}"
+      url:
+        raw: http://localhost:3000/bookproductapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - bookproductapi
+      description: >-
+        User will enter the quantity of tickets he want to purchase and is get
+        added to cart throught this api
+    response: []
+  - name: cart_details
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"current_email\":\"user1@gmail.com\"\r\n}"
+      url:
+        raw: http://localhost:3000/cartapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - cartapi
+      description: >-
+        It will retrived all the data that is added in cart in addto_cart api
+        call .
+    response: []
+  - name: confirm_booking
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: PUT
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"current_email\":\"user1@gmail.com\"\r\n}"
+      url:
+        raw: http://localhost:3000/cartapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - cartapi
+      description: >-
+        It will confirm the bookings and add into the Confimbookings database
+        and delete the temp cart database to null
+    response: []
+  - name: show_bookings
+    protocolProfileBehavior:
+      disabledSystemHeaders:
+        content-type: true
+    request:
+      auth:
+        type: bearer
+        bearer:
+          - key: token
+            value: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5MTkzMzIzOSwianRpIjoiZjBmNjVmZmMtOGY4ZC00NDlmLWE4ZTUtZDMyYThlMzFiZGM2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjkxOTMzMjM5LCJleHAiOjE2OTE5MzQxMzl9.hJL_c4OegVBr051MK7e6Jl0TJtP8pMc8wNIa5yJXrFQ
+            type: string
+      method: POST
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+      body:
+        mode: raw
+        raw: "{\r\n    \"current_email\":\"user1@gmail.com\"\r\n}"
+      url:
+        raw: http://localhost:3000/finalbookapi
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - finalbookapi
+      description: >-
+        It will show the bookings of the current user, data is retrived from the
+        current user email
+    response: []
+  - name: export_csv
+    protocolProfileBehavior:
+      disabledSystemHeaders: {}
+    request:
+      auth:
+        type: noauth
+      method: GET
+      header:
+        - key: Content-Type
+          value: application/json
+          type: text
+          disabled: true
+      url:
+        raw: http://localhost:3000/exportcsv?id=1&email=user1@gmail.com
+        protocol: http
+        host:
+          - localhost
+        port: '3000'
+        path:
+          - exportcsv
+        query:
+          - key: id
+            value: '1'
+          - key: email
+            value: user1@gmail.com
+      description: >-
+        For export jobs it will trigger the export_csv endpoint and mail the csv
+        file to the user whose email is passed, csv file will contain the
+        particular venue whose venue id is passed and it will show the details
+        of the shows also of that particular venue only.
+    response: []
