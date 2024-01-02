@@ -10,10 +10,9 @@ Node.js (for Vue.js)
 
 # Getting Started
 
-```bash
 Step 1. First install all the required packages from requirement.txt file by the command "pip install -r requirement.txt"
-```bash
-Step 2. Now start the backend server "python main.py", this is in backend folder serving on port 3000
+  ```bash
+  Step 2. Now start the backend server "python main.py", this is in backend folder serving on port 3000
 ```bash
 Step 3. Now start the Frontend server "python main.py", this is in frontend folder
 ```bash
